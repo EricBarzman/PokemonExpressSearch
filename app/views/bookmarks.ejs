@@ -1,0 +1,23 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/nav.ejs') %>
+    <main>
+        <h2 class="fav__title">Mes pokémons favoris</h2>
+        <div class="mainpage-container">
+        <% if (locals.pokemons.length === 0) { %>
+            <p class="notFound">Tu n'as encore aucun pokémon dans tes favoris.</p>
+            <% } %>
+            <% for (pokemon of locals.pokemons) { %>
+            <div class="card">
+                <a href="/detail/<%=pokemon.id%>">    
+                <article class="sub-card">
+                    <img src="/img/<%=pokemon.numero%>.png" class="card-img" alt="<%=pokemon.nom%>">
+                    <h2 class="card-name">#<%=pokemon.numero%> <%=pokemon.nom%></h2>
+                </article>
+            </a>
+            <a href="/bookmarks/remove/<%=pokemon.id%>" class="link-removeBookmark">Retirer des favoris</a>
+        </div>
+            <% } %> 
+        </div>
+    </main>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,21 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/nav.ejs') %>
+    <main>
+        <div class="mainpage-container">
+           <% if (locals.pokedex.length === 0) { %>
+            <p class="notFound">Aucun pokémon trouvé de cet attribut.</p>
+            <% } %>
+            <% for (pokemon of locals.pokedex) { %>
+            <div class="card">
+            <a href="/detail/<%=pokemon.id%>">    
+                <article class="sub-card">
+                    <img src="/img/<%=pokemon.numero%>.png" class="card-img" alt="<%=pokemon.nom%>">
+                    <h2 class="card-name">#<%=pokemon.numero%> <%=pokemon.nom%></h2>
+                </article>
+            </a>
+            <a href="/bookmarks/add/<%=pokemon.id%>" class="link-addBookmark">Ajouter aux favoris</a>
+            </div>
+            <% } %>
+        </div>
+    </main>
+<%- include('partials/footer.ejs') %>

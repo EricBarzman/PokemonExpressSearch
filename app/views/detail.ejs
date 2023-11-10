@@ -1,0 +1,94 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/nav.ejs') %>
+<main>
+    <div class="detail-container">
+        
+        <div class="top-container">
+            <h1 class="detail-title">Détails de <%=pokemon.nom%></h1>
+            <a href="/bookmarks/add/<%=pokemon.id%>" class="link-addBookmark">Ajouter aux favoris !</a>
+        </div>
+        
+        <div class="detail-page">
+                <div class ="detail-leftPanel">
+                    <img src="/img/<%=pokemon.numero%>.png" class="detail-img" alt="<%=pokemon.nom%>">
+                </div>
+
+            <div class="detail-rightPanel">
+                <h2 class="stat__name">#<%=pokemon.numero%> <%=pokemon.nom%></h2>
+                
+                <div class="stat__type-container">
+                    <% if (types) { for (const type of types) { %>
+                    <a href="/search/type?type=<%=type.name%>" style="background-color: #<%=type.color%>;" class="type"><%=type.name%></a>
+                    <% } } %>
+                </div>
+                
+                <h3 class="stat__subtitle">Statistiques</h3>
+                
+                <!-- Stats -->
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">PV</span>
+                            <span class="stat__element-strength"><%=pokemon.pv%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.pv*100/255)%>%;"></div>             
+                        </div>
+                    </div>
+
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">Attaque</span>
+                            <span class="stat__element-strength"><%=pokemon.attaque%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.attaque*100/255)%>%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">Défense</span>
+                            <span class="stat__element-strength"><%=pokemon.defense%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.defense*100/255)%>%;"></div>             
+                        </div>
+                    </div>
+
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">Attaque Spé.</span>
+                            <span class="stat__element-strength"><%=pokemon.attaque_spe%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.attaque_spe*100/255)%>%;"></div>             
+                        </div>
+                    </div>
+
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">Défense Spé.</span>
+                            <span class="stat__element-strength"><%=pokemon.defense_spe%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.defense_spe*100/255)%>%;"></div>             
+                        </div>
+                    </div>
+
+                    <div class="stat__element">
+                        <div class="stat__element-sub">
+                            <span class="stat__element-name">Vitesse</span>
+                            <span class="stat__element-strength"><%=pokemon.vitesse%></span>
+                        </div>
+                        <div class="stat__element-bar">
+                            <div class="stat__element-bar-filled" style="width : <%=Math.round(pokemon.vitesse*100/255)%>%;"></div>             
+                        </div>
+                    </div>
+                            
+            </div>
+        </div>
+        <a href="/" class="return-link">Retourner à la liste</a>    
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

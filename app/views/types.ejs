@@ -1,0 +1,16 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/nav.ejs') %>
+    <main>
+        <div>
+        <h2 class="type__title">Cliquez sur un type pour voir tous les pokemons de ce type</h2>
+        <ul class="type-button__container">
+            <% for (type of types) { %>
+                <a href="/search/type?type=<%=type.name%>" class="type-link" style="background-color: #<%=type.color%>;">
+                    <li class="type__type-text" style="background-color: #<%=type.color%>;"><%=type.name%></li>
+                </a>
+            <% } %>
+        </ul>  
+    </div>
+    </main>
+
+<%- include('partials/footer.ejs') %>
