@@ -1,46 +1,27 @@
-# Pokédex
+# Moteur de recherche de Pokémons sous Express
 
-Apprentis professeurs Chen, j'ai une requête pour vous ! Je souhaiterais un pokédex tout beau, tout neuf !
+Ce site de recherche de Pokémons a été créé dans le cadre d'un exercice avec l'école de formation O'Clock, puis je l'ai perfectionné.
 
-Un pokédex, est une sorte de dictionnaire de tous les pokémon (petites créatures fictives et adorables). Ces derniers peuvent se battre
-et disposent de caractéristiques de combat appelées statistiques. Chaque pokémon possède aussi un ou deux types (plante, roche, feu...).
-
-Vous aurez besoin pour cette mission des outils suivants :
+Il utilise les outils :
+- HTML et CSS
 - NodeJS
 - PostGreSQL
-- HTML et CSS
 - npm
-- express et ses copains
+- Express, EJS
 
-Une base de données à importer vous est fournie à la racine du projet : `pokedex.sql`. Elle contient la liste des pokémon et leurs types. Vous n'avez pas à la modifier.
+L'exercice regroupe des compétences front-end et back-end.
 
-## Instructions
+## Front-end
 
-Voici la liste des pages à faire, vous avez un aperçu de chacune dans le dossier résultat :
+Mise en place de trois pages en HTML, avec styles en CSS : homepage, page des détails d'un pokémon, et page des favoris.
+La homepage présente l'ensemble des pokémons enregistrés dans la BDD. On peut y faire une recherche par nom.
+On peut également cliquer sur une carte pokémon et accéder à la page détail, ou l'ajouter parmi les favoris.
 
-- Une page d'accueil qui liste tous les pokémon de la base (home.png)
-- Une page détail d'un pokémon qui affiche son type et ses stats (detail.png)
+La page détail présente les caractéristiques d'un pokémon. On peut ajouter le pokémon en favori.
 
-La police utilisée est Bree Serif sur Google Fonts. Pour les couleurs, utilisez une pipette :wink:. Pour celles des types, elle est fournie dans la base.
+La page favoris présente les pokémons enregistrés en favoris. On peut également accéder à la page détail de chacun, ou retirer chacun des favoris.
 
-## Par où commencer ?
+## Back-end
 
-Voilà quelques pistes pour vous aider :
-
-- Commencez par installer express, pg, et toute autre dépendance nécessaire avec npm
-- Mettez en place les dossiers nécessaires (#SoC !)
-- Vous aurez besoin d'un controller principal (mainController.js)
-- Il y a deux routes à créer
-- Pour récupérer les types d'un pokémon, il faut utiliser une jointure sur la table `pokemon_type`
-- Les images sont déjà prêtes et portent le nom du numéro du pokémon dans le dossier `public/img`
-- Pour les barres de statistiques, la valeur maximale est de 255. On peut donc utiliser un produit en croix pour le remplissage :wink:
-
-## Bonus
-
-Je veux ajouter une fonctionnalité : récupérer des pokémons selon leur type.
-
-Il nous faudra donc :
-
-- Une page qui liste les types de la base (types.png) quand on clique sur l'un on arrive sur la page suivante
-- Une page qui liste les pokémon filtrés par le type cliqué sur la page précédente (electrik.png)
-# PokemonExpressSearch
+Un serveur sous Node.JS utilisant Express ainsi qu'une BDD SQL, comportant un routeur, des controllers et des dataMappers pour échanger avec la BDD sous format SQL.
+Le serveur prend également en charge, sous forme de session, la liste des favoris.
