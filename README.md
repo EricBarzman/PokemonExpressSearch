@@ -1,6 +1,6 @@
-# Moteur de recherche de Pokemons sous Express
+# Moteur de recherche de Pokémons sous Express
 
-Ce site de recherche de Pokémon a été créé dans le cadre d'un exercice avec l'école de formation O'Clock, puis je l'ai perfectionné.
+Ce site de recherche de Pokémons a été créé dans le cadre d'un exercice avec l'école de formation O'Clock, puis je l'ai perfectionné.
 
 Il utilise les outils :
 - HTML et CSS
