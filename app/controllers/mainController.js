@@ -17,7 +17,6 @@ const mainController = {
         try {
             const pokemon = await dataMapper.getPokemonById(targetId);
             const types = await dataMapper.getPokemonTypes(targetId);
-            console.log(types);
             if (pokemon) { res.render("detail", { pokemon, types }) }
             else { res.status(404).send(`Pokemon with id ${targetId} not found`); }
         } catch(error) {

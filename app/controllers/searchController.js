@@ -5,7 +5,6 @@ const searchController = {
 
     searchName : async (req, res) => {
         const name = req.query.name
-        console.log(name);
         const pokemonsFound = await dataMapper.getPokemonByName(name);
         res.render("home", { pokedex : pokemonsFound })
     },
