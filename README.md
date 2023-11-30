@@ -35,7 +35,7 @@ La *page favoris* (non présentée dans le dossier intégration) présente, à l
 Un serveur sous runtime Node.JS utilisant le framework Express, qui contient :
 - un *routeur*
 - une *BDD* PostgreSQL contenant les pokémons et leurs caractéristiques
-- une *architecture MVC*
-- un *pattern dataMapper*
+- une `architecture MVC`
+- un `pattern dataMapper`
   
 Le serveur prend également en charge, sous forme de session, la liste des favoris.
