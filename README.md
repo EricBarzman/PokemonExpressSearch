@@ -7,10 +7,10 @@ La partie front-end utilise :
 - `HTML` et `CSS`
 
 Le back-end est créé 
-- en runtime Node.js
-- avec le framework Express.
+- en runtime `Node.js`
+- avec le framework `Express`.
 
-L'accès à la BDD se fait sous PosGreSQL.
+L'accès à la BDD se fait sous `PosGreSQL`.
 
 ## Front-end
 
@@ -33,9 +33,9 @@ La *page favoris* (non présentée dans le dossier intégration) présente, à l
 ## Back-end
 
 Un serveur sous runtime Node.JS utilisant le framework Express, qui contient :
-- un routeur
-- une BDD PostgreSQL contenant les pokémons et leurs caractéristiques
-- une architecture MVC
-- un pattern dataMapper
+- un *routeur*
+- une *BDD* PostgreSQL contenant les pokémons et leurs caractéristiques
+- une *architecture MVC*
+- un *pattern dataMapper*
   
 Le serveur prend également en charge, sous forme de session, la liste des favoris.
