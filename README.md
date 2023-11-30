@@ -6,8 +6,8 @@ Je l'ai par la suite perfectionné pour pouvoir le présenter ici.
 La partie front-end utilise :
 - `HTML` et `CSS`
 
-Le back-end est créé 
-- en runtime `Node.js`
+La partie back-end (en javascript) : 
+- le runtime `Node.Js`
 - avec le framework `Express`.
 
 L'accès à la BDD se fait sous `PosGreSQL`.
